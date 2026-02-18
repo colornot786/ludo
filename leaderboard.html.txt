@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتصدرين | قروب القرصان</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #020617; color: white; background-image: radial-gradient(circle at top, #0c4a6e 0%, #020617 100%); min-height: 100vh; }
+        .glass { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(15px); border: 1px solid rgba(56, 189, 248, 0.1); }
+    </style>
+</head>
+<body class="p-6">
+    <button onclick="location.href='index.html'" class="text-sky-400 font-bold mb-10 block">← العودة للرئيسية</button>
+    <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl font-black text-center text-sky-400 mb-10">لوحة المتصدرين</h1>
+        <div class="glass rounded-3xl overflow-hidden">
+            <div class="grid grid-cols-3 p-5 bg-sky-900/40 font-bold text-center">
+                <div>المركز</div>
+                <div>الاسم</div>
+                <div>النقاط</div>
+            </div>
+            <div class="grid grid-cols-3 p-6 border-b border-sky-900/30 text-center items-center">
+                <div class="text-yellow-500 font-black text-2xl">1</div>
+                <div class="font-bold">سلطان اللودو</div>
+                <div class="text-sky-400 font-black">12,400</div>
+            </div>
+            <div class="grid grid-cols-3 p-6 border-b border-sky-900/30 text-center items-center">
+                <div class="text-slate-400 font-black text-2xl">2</div>
+                <div class="font-bold">القرصان الشجاع</div>
+                <div class="text-sky-400 font-black">9,850</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    

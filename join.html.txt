@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل | قروب القرصان</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; background: #010409; background-image: radial-gradient(circle, #0c4a6e 0%, #010409 100%); color: white; min-height: 100vh; display: flex; align-items: center; justify-content: center; p: 20px; }
+        .glass-form { background: rgba(13, 25, 48, 0.6); backdrop-filter: blur(15px); border: 1px solid rgba(56, 189, 248, 0.2); }
+        .input-field { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.2); outline: none; color: white; }
+        .btn-glow { background: linear-gradient(90deg, #0ea5e9, #2563eb); }
+    </style>
+</head>
+<body class="p-6">
+    <button onclick="location.href='index.html'" class="absolute top-6 right-6 text-sky-400 font-bold underline">← رجوع للرئيسية</button>
+    <div class="max-w-xl w-full">
+        <form id="regForm" class="glass-form p-8 rounded-[2rem] space-y-5">
+            <h1 class="text-3xl font-black text-center text-sky-400 mb-6 tracking-tight">سجل بياناتك للبطولة</h1>
+            <input type="text" id="n" required placeholder="اسمك في اللعبة" class="input-field w-full p-4 rounded-xl">
+            <input type="number" id="i" required placeholder="معرف اللاعب (ID)" class="input-field w-full p-4 rounded-xl">
+            <input type="number" id="l" required placeholder="المستوى (Level)" class="input-field w-full p-4 rounded-xl">
+            <button type="submit" class="btn-glow w-full py-4 rounded-2xl font-black text-lg">إرسال عبر واتساب</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('regForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const myNumber = "967778984772"; 
+            const msg = `*تسجيل جديد*%0Aالاسم: ${document.getElementById('n').value}%0AID: ${document.getElementById('i').value}%0ALevel: ${document.getElementById('l').value}`;
+            window.open(`https://wa.me/${myNumber}?text=${msg}`, '_blank');
+        });
+    </script>
+</body>
+</html>
+    
